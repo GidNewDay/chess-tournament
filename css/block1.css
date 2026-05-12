@@ -1,0 +1,280 @@
+.block1 {
+  padding-top: 48px;
+  padding-bottom: 60px;
+}
+
+.container {
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.block__wrapper1 {
+  display: grid;
+  grid-template-areas:
+    "text-first"
+    "image"
+    "text-second";
+  gap: 24px;
+  align-items: center;
+}
+
+.block__text-group {
+  display: contents;
+  /* дети напрямую участвуют в сетке родителя */
+}
+
+h3 span {
+  color: var(--color-red);
+  font-weight: bold;
+}
+
+.first-grid {
+  grid-area: text-first;
+}
+
+.second-grid {
+  grid-area: text-second;
+}
+
+.block__image1 {
+  grid-area: image;
+  text-align: center;
+}
+
+.block__image1 img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  border-radius: 50% / 50%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+/* ===== ПЛАНШЕТ / ДЕСКТОП (1024px) ===== */
+@media (min-width: 1024px) {
+  .block1 {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+
+  .container {
+    padding-left: 72px;
+    padding-right: 72px;
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+  }
+
+  .block__wrapper1 {
+    display: flex;
+    gap: 64px;
+    align-items: center;
+    /* отключаем grid */
+    grid-template-areas: none;
+  }
+
+  .block__text-group {
+    /* возвращаем обычный блок */
+    display: block;
+    flex: 1;
+  }
+
+  .block__image1 {
+    flex-shrink: 0;
+    text-align: left;
+  }
+
+}
+
+.block__wrapper2 {
+  padding-top: 24px;
+  display: grid;
+  gap: 30px;
+}
+
+.block__left {
+  overflow: clip;
+  overflow-clip-margin: 40px;
+  position: relative;
+  min-height: 420px;
+}
+
+/* Мобилка (база) – колонка */
+
+.block__image2 {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background-image: url('/images/cooper_union.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.block__image2::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('/images/stone-texture.png') repeat;
+    mix-blend-mode: color-burn;
+}
+/* ===== ПЛАНШЕТ / ДЕСКТОП ===== */
+@media (min-width: 1024px) {
+  .block__wrapper2 {
+    padding-top: 64px;
+    grid-template-columns: 2fr 3fr;
+    gap: clamp(24px, 4vw, 44px);
+    align-items: stretch;
+  }
+
+  .block__image2 {
+    top: -28px;
+    left: -28px;
+    right: -28px;
+    bottom: -28px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .block__wrapper2 {
+    gap: 44px;
+  }
+
+}
+
+/* ========================== ТАБЛИЦА  ============================ */
+.block1__table {
+  width: 100%;
+  padding-top: 32px;
+  padding-bottom: 28px;
+  border-collapse: collapse;
+  font-family: var(--font-primary);
+  font-size: 20px;
+}
+
+/* Превращаем таблицу в блоки на мобилке */
+.block1__table,
+.block1__table tbody,
+.block1__table tr,
+.block1__table th,
+.block1__table td {
+  display: block;
+}
+
+/* Каждая строка — как отдельная запись, только нижняя граница */
+.block1__table tr {
+  border-bottom: 2px solid #D0D0D0;
+}
+
+/* У последней строки граница не нужна */
+.block1__table tr:last-child {
+  border-bottom: none;
+}
+
+/* Внутри строки ячейки без границ */
+.block1__table th,
+.block1__table td {
+  border: none;
+  text-align: left;
+}
+
+.block1__table th {
+  padding-top: 12px;
+  font-weight: 400;
+  opacity: 70%;
+}
+
+.block1__table td {
+  font-weight: 600;
+  padding-top: 12px;
+  padding-bottom: 16px;
+}
+
+/* Зачёркивание */
+.block1__table s {
+  text-decoration: line-through var(--color-red);
+  margin-right: 8px;
+}
+
+/* ===== ДЕСКТОП (768px) – обычная таблица, только внутренние линии между ячейками ===== */
+@media (min-width: 768px) {
+  a {
+    font-size: 20px;
+  }
+
+  /* Возвращаем стандартное табличное отображение */
+  .block1__table,
+  .block1__table tbody,
+  .block1__table tr,
+  .block1__table th,
+  .block1__table td {
+    display: table;
+  }
+
+  .block1__table {
+    /* width: auto; */
+    margin-top: 60px;
+    margin-bottom: 48px;
+  }
+
+  .block1__table tbody {
+    display: table-row-group;
+  }
+
+  .block1__table tr {
+    display: table-row;
+    border: none;
+    /* убираем мобильную границу */
+    padding: 0;
+  }
+
+  .block1__table th,
+  .block1__table td {
+    display: table-cell;
+    border: 2px solid #D0D0D0;
+    vertical-align: top;
+    font-size: 20px;
+    line-height: 120%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    white-space: nowrap;
+    vertical-align: middle;
+  }
+
+  /* Убираем внешние границы у крайних ячеек */
+  /* Убираем верхнюю границу у первой строки */
+  .block1__table tr:first-child th,
+  .block1__table tr:first-child td {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  /* Убираем нижнюю границу у последней строки */
+  .block1__table tr:last-child th,
+  .block1__table tr:last-child td {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  /* Убираем левую границу у первой колонки */
+  .block1__table th:first-child,
+  .block1__table td:first-child {
+    border-left: none;
+  }
+
+  /* Убираем правую границу у последней колонки */
+  .block1__table th:last-child,
+  .block1__table td:last-child {
+    border-right: none;
+  }
+
+  /* Стилизация заголовков (первый столбец) */
+  .block1__table th {
+    padding-right: 16px;
+    width: 1%;
+  }
+
+  .block1__table td {
+    padding-left: 16px;
+  }
+}

@@ -1,0 +1,52 @@
+/* ========================= Бегущая строка ======================== */
+.marquee {
+  background-color: var(--color-red);
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  padding: 12px 0;
+  position: inherit;
+  z-index: 1;
+}
+
+.marquee__track {
+  display: inline-flex;
+  animation: scroll linear infinite;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.marquee__text {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: white;
+  padding-right: 6px;
+  text-transform: uppercase;
+  font-family: "Merriweather";
+  line-height: 110%;
+  flex-shrink: 0;
+}
+
+/* Анимация сдвига на 1/4 ширины */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-25%);
+  }
+}
+
+@media (min-width: 768px) {
+
+  .marquee {
+    padding: 18px 0;
+  }
+
+  .marquee__text {
+    font-size: 22px;
+  }
+}

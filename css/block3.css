@@ -1,0 +1,202 @@
+/* ===== БЛОК 3: Участники турнира (Mobile First) ===== */
+.block3 {
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+
+.block3__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  gap: 20px;
+}
+
+.block3__title {
+  font-family: var(--font-heading);
+  font-size: 36px;
+}
+
+/* Навигация (на мобилке скрыта, показывается только через JS снизу) */
+.block3__nav {
+  display: none;
+  align-items: center;
+  gap: 16px;
+}
+
+#mobilePrev,
+#participantsPrev {
+  background-image: url('/images/left.png');
+  background-position-x: 11px;
+}
+
+#mobileNext,
+#participantsNext {
+  background-image: url('/images/right.png');
+  background-position-x: 14px;
+}
+
+.block3__nav-btn {
+  background-color: var(--color-black);
+  background-repeat: no-repeat;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-flex;
+  background-position: center;
+}
+
+.block3__nav-btn:hover {
+  background-color: var(--color-yellow);
+}
+
+.block3__nav-btn:disabled {
+  cursor: not-allowed;
+  background-color: #D6D6D6;
+}
+
+.block3__nav-btn:disabled:hover {
+  background-color: #D6D6D6;
+  transform: none;
+}
+
+.block3__counter {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  white-space: nowrap;
+  min-width: 35px;
+}
+
+.block3__counter .current {
+  color: var(--color-black);
+  /* font-weight: 500; */
+}
+
+.block3__counter .total {
+  opacity: 0.6;
+}
+
+/* Слайдер */
+.block3__slider-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.block3__slider {
+  overflow: hidden;
+}
+
+.block3__track {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 20px;
+}
+
+/* Карточка участника (мобильная версия - 1 карточка) */
+.block3__card {
+  flex-shrink: 0;
+  width: 100%;
+  padding: 32px 20px 28px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.block3__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.block3__photo {
+  width: 100%;
+  max-width: 244px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+.block3__name {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: none;
+  margin: 0 0 8px;
+}
+
+.block3__rank {
+  font-size: 20px;
+  margin: 0 0 20px;
+  opacity: 0.6;
+  line-height: 120%;
+}
+
+.block3__btn {
+  background: transparent;
+  border: 1px solid var(--color-blue);
+  border-radius: 62px;
+  padding: 10px 12px;
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-blue);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.block3__btn:hover {
+  background: var(--color-blue);
+  color: #fff;
+}
+
+/* Мобильная навигация (создаётся JS, показывается на мобилке) */
+.block3__mobile-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+/* ===== ДЕСКТОП (768px) ===== */
+@media (min-width: 768px) {
+  .block3 {
+    padding-top: 100px;
+  }
+
+  .block3__header {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 20px;
+  }
+
+  .block3__title {
+    font-size: 54px;
+  }
+
+  /* Показываем десктопную навигацию */
+  .block3__nav {
+    display: flex;
+  }
+
+  /* Скрываем мобильную навигацию */
+  .block3__mobile-nav {
+    display: none;
+  }
+
+  /* 3 карточки на экране */
+  .block3__card {
+    width: calc((100% - 40px) / 3);
+  }
+}
+
+/* ===== ШИРОКИЕ ЭКРАНЫ (1366px) ===== */
+@media (min-width: 1366px) {
+  .block3 .container {
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+}

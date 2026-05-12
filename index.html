@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Шахматный турнир</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/marquee.css" />
+    <link rel="stylesheet" href="css/block1.css" />
+    <link rel="stylesheet" href="css/block2.css" />
+    <link rel="stylesheet" href="css/block3.css" />
+  </head>
+  <body>
+    <!--Header-->
+    <header class="header">
+      <div class="header__container">
+        <div class="header__content">
+          <!-- header__content-left -->
+          <div class="header__content-left">
+            <div class="header__logo">
+              <img src="/images/logo.png" alt="" class="logo" />
+              Клуб<br />четырех коней
+            </div>
+            <h1 class="header_title">
+              Превратите <br />уездный город<br />
+              <span class="block text-center">в&nbsp;столицу</span>
+              <span class="block text-right">земного шара</span>
+            </h1>
+            <p class="header__description">
+              Оплатите взнос на&nbsp;телеграммы для организации Международного васюкинского турнира по&nbsp;шахматам
+            </p>
+            <div class="header__buttons">
+              <button data-scroll-to="stagesBlock" class="button button--dark"> Поддержать шахматную&nbsp;мысль </button>
+              <button data-scroll-to="participantsBlock" class="button button--outline"> Подробнее о&nbsp;турнире </button>
+            </div>
+          </div>
+          <!-- header__content-right -->
+          <div class="header__content-right"></div>
+        </div>
+      </div>
+      <!-- Running line -->
+      <div class="marquee">
+        <div class="marquee__track">
+          <span class="marquee__text">
+            Дело помощи утопающим&nbsp;&mdash; дело рук самих утопающих! &bull; Шахматы двигают вперед не&nbsp;только
+            культуру, но&nbsp;и&nbsp;экономику! &bull; Лед тронулся, господа присяжные заседатели! &bull;
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="block1">
+        <div class="container">
+          <div class="block__wrapper1">
+            <div class="block__text-group">
+              <h3 class="first-grid">Чтобы поддержать Международный васюкинский турнир</h3>
+              <h3 class="second-grid">
+                посетите лекцию на&nbsp;тему:
+                <span>&laquo;Плодотворная дебютная идея&raquo;</span>
+              </h3>
+            </div>
+            <div class="block__image1">
+              <img src="/images/many_chees_players_tournament.jpg" alt="Шахматная фигура" />
+            </div>
+          </div>
+
+          <div class="block__wrapper2">
+            <div class="block__left">
+              <div class="block__image2"></div>
+            </div>
+            <div class="block__right">
+              <h3 class="h3">
+                и&nbsp;Сеанс
+                <span> одновременной игры в&nbsp;шахматы на&nbsp;160 досках </span>
+                гроссмейстера О.&nbsp;Бендера
+              </h3>
+              <div class="table-wrapper">
+                <table class="block1__table">
+                  <tbody>
+                    <tr>
+                      <th>Место проведения:</th>
+                      <td>Клуб «Картонажник»</td>
+                    </tr>
+                    <tr>
+                      <th>Дата и&nbsp;время мероприятия:</th>
+                      <td>22&nbsp;июня 1927&nbsp;г. в&nbsp;18:00</td>
+                    </tr>
+                    <tr>
+                      <th>Стоимость входных билетов:</th>
+                      <td>20&nbsp;коп.</td>
+                    </tr>
+                    <tr>
+                      <th>Плата за&nbsp;игру:</th>
+                      <td>50&nbsp;коп.</td>
+                    </tr>
+                    <tr>
+                      <th>Взнос на&nbsp;телеграммы:</th>
+                      <td><s>100 руб.</s> 21&nbsp;руб. 16&nbsp;коп.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <a href="#" class=""> По&nbsp;всем вопросам обращаться в&nbsp;администрацию к&nbsp;К.&nbsp;Михельсону </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="block2" id="stagesBlock">
+        <div class="container">
+          <div class="block2__header">
+            <h2 class="block2__title">
+              <span class="block2__title-line1">Этапы преображения</span>
+              <span class="block2__title-line2">
+                <span class="block2__title-word">Васюков</span>
+                <a href="#" class="block2__link">Будущие источники обогащения васюкинцев</a>
+              </span>
+            </h2>
+          </div>
+          <!-- Здесь  слайдер (шаг 2) -->
+          <div id="block2-content" class="block2__content">
+            <!-- Скрытый источник пунктов (всегда существует) -->
+            <div class="block2__items-source" style="display: none">
+              <div class="block2__item" data-id="1">
+                <div class="block2__item-number">1</div>
+                <div class="block2__item-text">Строительство железнодорожной магистрали Москва-Васюки</div>
+              </div>
+              <div class="block2__item" data-id="2">
+                <div class="block2__item-number">2</div>
+                <div class="block2__item-text">
+                  Открытие фешенебельной гостиницы &laquo;Проходная пешка&raquo; и&nbsp;других небоскрёбов
+                </div>
+              </div>
+              <div class="block2__item" data-id="3">
+                <div class="block2__item-number">3</div>
+                <div class="block2__item-text">
+                  Поднятие сельского хозяйства в&nbsp;радиусе на&nbsp;тысячу километров: производство овощей, фруктов,
+                  икры, шоколадных конфет
+                </div>
+              </div>
+              <div class="block2__item" data-id="4">
+                <div class="block2__item-number">4</div>
+                <div class="block2__item-text">Строительство дворца для турнира</div>
+              </div>
+              <div class="block2__item" data-id="5">
+                <div class="block2__item-number">5</div>
+                <div class="block2__item-text">Размещение гаражей для гостевого автотранспорта</div>
+              </div>
+              <div class="block2__item" data-id="6">
+                <div class="block2__item-number">6</div>
+                <div class="block2__item-text">
+                  Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов
+                </div>
+              </div>
+              <div class="block2__item" data-id="7">
+                <div class="block2__item-number">7</div>
+                <div class="block2__item-text">
+                  Создание аэропорта &laquo;Большие Васюки&raquo; с&nbsp;регулярным отправлением почтовых самолётов
+                  и&nbsp;дирижаблей во&nbsp;все концы света, включая Лос-Анжелос и&nbsp;Мельбурн
+                </div>
+              </div>
+            </div>
+
+            <!-- Контейнер для сетки (десктоп) -->
+            <div class="block2__grid"></div>
+
+            <!-- Контейнер для слайдера (мобилка) -->
+            <div class="block2__slider-wrapper" style="display: none"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="block3" id="participantsBlock">
+        <div class="container">
+          <div class="block3__header">
+            <h2 class="block3__title">Участники турнира</h2>
+            <div class="block3__nav">
+              <button class="block3__nav-btn block3__nav-btn--prev" id="participantsPrev"></button>
+              <span class="block3__counter" id="participantsCounter">1 / 6</span>
+              <button class="block3__nav-btn block3__nav-btn--next" id="participantsNext"></button>
+            </div>
+          </div>
+
+          <div class="block3__slider-wrapper">
+            <div class="block3__slider" id="participantsSlider">
+              <div class="block3__track" id="participantsTrack">
+                <!-- Карточка 1 -->
+                <div class="block3__card">
+                  <img src="/images/avatar.jpg" alt="Хосе-Рауль Капабланка" class="block3__photo" />
+                  <h4 class="block3__name">Хосе-Рауль Капабланка</h4>
+                  <p class="block3__rank">Чемпион мира по&nbsp;шахматам</p>
+                  <button class="block3__btn">Подробнее</button>
+                </div>
+                <!-- Карточка 2 -->
+                <div class="block3__card">
+                  <img src="/images/avatar.jpg" alt="Эммануил Ласкер" class="block3__photo" />
+                  <h4 class="block3__name">Эммануил Ласкер</h4>
+                  <p class="block3__rank">Чемпион мира по&nbsp;шахматам</p>
+                  <button class="block3__btn">Подробнее</button>
+                </div>
+                <!-- Карточка 3 -->
+                <div class="block3__card">
+                  <img src="/images/avatar.jpg" alt="Александр Алехин" class="block3__photo" />
+                  <h4 class="block3__name">Александр Алехин</h4>
+                  <p class="block3__rank">Чемпион мира по&nbsp;шахматам</p>
+                  <button class="block3__btn">Подробнее</button>
+                </div>
+                <!-- Карточка 4 -->
+                <div class="block3__card">
+                  <img src="/images/avatar.jpg" alt="Арон Нимцович" class="block3__photo" />
+                  <h4 class="block3__name">Арон Нимцович</h4>
+                  <p class="block3__rank">Чемпион мира по&nbsp;шахматам</p>
+                  <button class="block3__btn">Подробнее</button>
+                </div>
+                <!-- Карточка 5 -->
+                <div class="block3__card">
+                  <img src="/images/avatar.jpg" alt="Рихард Рети" class="block3__photo" />
+                  <h4 class="block3__name">Рихард Рети</h4>
+                  <p class="block3__rank">Чемпион мира по&nbsp;шахматам</p>
+                  <button class="block3__btn">Подробнее</button>
+                </div>
+                <!-- Карточка 6 -->
+                <div class="block3__card">
+                  <img src="/images/avatar.jpg" alt="Остап Бендер" class="block3__photo" />
+                  <h4 class="block3__name">Остап Бендер</h4>
+                  <p class="block3__rank">Чемпион мира по&nbsp;шахматам</p>
+                  <button class="block3__btn">Подробнее</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <!-- Running line -->
+      <div class="marquee">
+        <div class="marquee__track" id="marqueeTrack">
+          <span class="marquee__text">
+            Дело помощи утопающим&nbsp;&mdash; дело рук самих утопающих! &bull; Шахматы двигают вперед не&nbsp;только
+            культуру, но&nbsp;и&nbsp;экономику! &bull; Лед тронулся, господа присяжные заседатели! &bull;
+          </span>
+        </div>
+      </div>
+
+      <div class="footer__copyright">
+        <p>
+          Все персонажи, события и&nbsp;цитаты являются вымышленными и&nbsp;не&nbsp;принадлежат создателям сайта.
+          С&nbsp;подробностями можно познакомиться в&nbsp;главе XXXIV романа Ильи Ильфа и&nbsp;Евгения Петрова
+          &laquo;Двенадцать стульев&raquo;.
+        </p>
+      </div>
+    </footer>
+
+    <script src="/js/marquee.js"></script>
+    <script src="/js/block1.js"></script>
+    <script src="/js/block2.js"></script>
+    <script src="/js/block3.js"></script>
+  </body>
+</html>
