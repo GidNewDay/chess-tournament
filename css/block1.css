@@ -106,7 +106,7 @@ h3 span {
   left: -20px;
   right: -20px;
   bottom: -20px;
-  background-image: url('/images/cooper_union.png');
+  background-image: url('../images/cooper_union.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -115,7 +115,7 @@ h3 span {
     content: "";
     position: absolute;
     inset: 0;
-    background: url('/images/stone-texture.png') repeat;
+    background: url('../images/stone-texture.png') repeat;
     mix-blend-mode: color-burn;
 }
 /* ===== ПЛАНШЕТ / ДЕСКТОП ===== */

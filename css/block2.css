@@ -117,7 +117,7 @@
     height: 182px;
     top: 20px;
     z-index: 1;
-    background-image: url(/images/biplane.png);
+    background-image: url(../images/biplane.png);
     background-position: center top;
     background-repeat: no-repeat;
     background-size: contain;
@@ -155,7 +155,7 @@
     left: 0;
     width: 100%;
     height: 300px;
-    background-image: url('/images/stone-texture.png');
+    background-image: url('../images/stone-texture.png');
     background-size: auto;
     background-position: left -230px top -140px;
     background-repeat: no-repeat;
@@ -169,7 +169,7 @@
     left: 0;
     width: 100%;
     height: 300px;
-    background-image: url('/images/stamp_paper.png');
+    background-image: url('../images/stamp_paper.png');
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
@@ -192,12 +192,12 @@
 }
 
 #sliderPrev {
-    background-image: url('/images/left.png');
+    background-image: url('../images/left.png');
     background-position-x: 11px;
 }
 
 #sliderNext {
-    background-image: url('/images/right.png');
+    background-image: url('../images/right.png');
     background-position-x: 14px;
 }
 
@@ -261,7 +261,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url('/images/stone-texture.png');
+        background-image: url('../images/stone-texture.png');
         background-size: auto;
         background-position: center;
         background-repeat: no-repeat;
@@ -276,7 +276,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url('/images/stamp_paper.png');
+        background-image: url('../images/stamp_paper.png');
         background-size: auto;
         background-position: center;
         background-repeat: no-repeat;
@@ -315,7 +315,7 @@
     .block2__grid::after {
         content: "";
         position: absolute;
-        background-image: url(/images/biplane.png);
+        background-image: url(../images/biplane.png);
         background-repeat: no-repeat;
         width: 370px;
         height: 195px;

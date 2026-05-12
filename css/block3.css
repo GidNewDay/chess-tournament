@@ -27,13 +27,13 @@
 
 #mobilePrev,
 #participantsPrev {
-  background-image: url('/images/left.png');
+  background-image: url('../images/left.png');
   background-position-x: 11px;
 }
 
 #mobileNext,
 #participantsNext {
-  background-image: url('/images/right.png');
+  background-image: url('../images/right.png');
   background-position-x: 14px;
 }
 

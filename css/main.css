@@ -78,7 +78,7 @@ header::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: url('/images/stone-texture.png') repeat;
+  background: url('../images/stone-texture.png') repeat;
   mix-blend-mode: color-burn;
 }
 
@@ -86,7 +86,7 @@ header::after {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url('/images/horse.png');
+  background-image: url('../images/horse.png');
   background-repeat: no-repeat;
   background-position-y: bottom 45px;
   background-position-x: calc(50% + -4px);
@@ -94,7 +94,7 @@ header::after {
 }
 
 .header__container {
-  background-image: url('/images/city.png'), url('/images/sun.svg');
+  background-image: url('../images/city.png'), url('../images/sun.svg');
   background-position: right 30% bottom 0, right 0 bottom 15%;
   background-size: 300%, contain;
   background-repeat: no-repeat;
@@ -219,7 +219,7 @@ footer {
   }
 
   header::after {
-    background-image: url('/images/figures.png');
+    background-image: url('../images/figures.png');
     background-position-y: bottom 60px;
     background-position-x: calc(50% + 396px);
     background-size: unset;
